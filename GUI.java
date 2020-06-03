@@ -26,18 +26,15 @@ public class GUI {
 		}
 	}
 
+	/**
+	 * @wbp.parser.entryPoint
+	 */
 	protected void createContents() {
 		shlSimplegraphs = new Shell();
 		shlSimplegraphs.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
 		shlSimplegraphs.setSize(420, 242);
 		shlSimplegraphs.setText("SimpleGraphs");
 		shlSimplegraphs.setLayout(null);
-		
-		Label GraphLbl = new Label(shlSimplegraphs, SWT.NONE);
-		GraphLbl.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
-		GraphLbl.setFont(SWTResourceManager.getFont("Segoe UI", 9, SWT.BOLD));
-		GraphLbl.setBounds(138, 10, 137, 20);
-		GraphLbl.setText("Select Graph Type");
 		
 		Button LinearButton = new Button(shlSimplegraphs, SWT.NONE);
 		LinearButton.addMouseListener(new MouseAdapter() {
@@ -113,6 +110,12 @@ public class GUI {
 		lblJackStHilaire.setText("Jack St. Hilaire - 2020");
 		lblJackStHilaire.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
 		lblJackStHilaire.setBounds(138, 165, 137, 20);
+		
+		Label lblNewLabel = new Label(shlSimplegraphs, SWT.NONE);
+		lblNewLabel.setFont(SWTResourceManager.getFont("Segoe UI", 13, SWT.BOLD));
+		lblNewLabel.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND));
+		lblNewLabel.setBounds(125, 10, 144, 36);
+		lblNewLabel.setText("SimpleGraphs");
 
 	}
 }
